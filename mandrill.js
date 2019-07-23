@@ -65,6 +65,7 @@
               json = JSON.parse(json);
             } catch (error) {
               e = error;
+              console.log(`Server Error: Mandrill response cannot parse json: ${json}`);
               json = {
                 status: 'error',
                 name: 'GeneralError',
